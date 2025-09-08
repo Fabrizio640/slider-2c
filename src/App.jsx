@@ -3,6 +3,14 @@ import './App.css'
 import Xuxa1 from './assets/notebook-xuxa.jpg'
 import pcgamer from './assets/PC-Gamer 2.webp'
 import pcben10 from './assets/Pc-Ben10.jpg'
+import discord from './assets/discord.svg'
+import instagram from './assets/instagram.svg'
+import whatsapp from './assets/whatsapp.svg'
+import youtube from './assets/youtube.svg'
+import Slider1 from './assets/slider 1.jpg'
+import Slider2 from './assets/slider 2.jpg'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,7 +18,28 @@ function App() {
   return (
     <>
       <main>
-        <header></header>
+        <header>
+        <Swiper
+      spaceBetween={50}
+      slidesPerView={3}
+      onSlideChange={() => console.log('slide change')}
+      onSwiper={(swiper) => console.log(swiper)}
+    >
+      <SwiperSlide>
+        <img src={Slider1} alt="" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={Slider2} alt="" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={Slider1} alt="" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={Slider2} alt="" />
+      </SwiperSlide>
+      ... 
+    </Swiper>
+        </header>
         <section className="produtos">
 
           {/* Produto 1 */}
@@ -60,16 +89,16 @@ function App() {
 
           <div className="social-icons">
             <div className="icon">
-              <img src="instagram.svg" alt="" id="instagram" />
+              <img src={instagram} alt="" id="instagram" />
             </div>
             <div className="icon">
-              <img src="discord.svg" alt="" id="discord" />
+              <img src={discord} alt="" id="discord" />
             </div>
             <div className="icon">
-              <img src="whatsapp.svg" alt="" id="whatsapp" />
+              <img src={whatsapp} alt="" id="whatsapp" />
             </div>
             <div className="icon">
-              <img src="youtube.svg" alt="" id="youtube" />
+              <img src={youtube} alt="" id="youtube" />
             </div>
           </div>
         </footer>
